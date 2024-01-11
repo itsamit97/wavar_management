@@ -1,0 +1,87 @@
+Distribution - Managment- wavar 
+
+Git Hub Link:  https://github.com/itsamit97/wavar_management/tree/master
+
+Steps :
+
+   1. create database name : distribution_management
+   2. mirate all migration files using :  "php artisan migrate"
+   3. start the server using command : "php artisan serve"
+   4.Register the Admin , to register use link : "http://localhost:8000/registration" 
+     Note: registration is only for admin.
+
+
+Admin Panel:
+    
+    In admin panel there are three listing pages like below
+     a.shop lists
+     b.branch lists
+     c.branch bills
+
+Shop lists
+    Admin can add shop, while adding shops he can create username & password for the main shop, that shop owner can login to see shop details
+
+    Admin can add, edit , delete , enable & disable, export data in excel,csv & pdf & search the perticular shop
+    In shop list, admin can see the count of branches related to that perticular shop
+    In shop list, admin can see all total bills has been added by all branches related to any specific shop.
+
+Branch lists
+    Admin can add branch, while adding branch he can create username & password for the branch, so branch owner can login to see branch & bill details
+
+    Admin can add, edit , delete , enable & disable,  export data in excel,csv & pdf & search the perticular branch
+
+    In branch list, admin can see the list of branches 
+    In branch list, admin can see all total bill amount of perticular branch.
+
+Branch lists
+    Admin can view bill detail list by selecting shop & branch name from dropdown
+
+
+===========================================================================
+
+
+
+Shop Owner Panel:
+    
+    In shop owner panel there are three listing pages like below
+     a.shop detail
+     b.branch lists
+     c.branch bills
+
+
+Shop detail
+    Shop owner can see detail of his shop & also can edit basic details
+ 
+
+ Branch lists
+    Shop owner can add branch, while adding branch he can create username & password for the branch, so branch owner can login to see branch & bill details
+
+    Shop owner can add, edit , delete , enable & disable,  export data in excel,csv & pdf & search the perticular branch
+    In branch list, Shop owner can see the list of branches 
+    In branch list, Shop owner can see all total bill amount of perticular branch.
+
+
+Branch lists
+    Shop owner can view bill detail list by selecting branch name from dropdown
+
+===========================================================================
+
+
+Branch Owner Panel:
+    
+    In Branch Owner panel, there are just sigle page that is
+     a.branch bills
+
+Branch lists
+
+    Shop owner can add, edit , delete ,  export data in excel,csv & pdf & search the perticular bill
+
+===========================================================================
+Basic featurs
+    Logout feature added for all users
+    sorting added for all tables
+    pagination added for all tables
+    searchin added for all tables
+    export data added for all users
+
+===========================================================================
