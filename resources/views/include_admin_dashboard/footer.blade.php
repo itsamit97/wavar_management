@@ -2,17 +2,15 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-        <span>Copyright &copy; Education Commitee</span>
+            <span>Copyright &copy;  Education Commitee</span>
         </div>
     </div>
 </footer>
 <!-- End of Footer -->
 
 </div>
-<!-- End of Content Wrapper -->
 
 </div>
-<!-- End of Page Wrapper -->
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
@@ -41,50 +39,38 @@
 
 <script>
 
-// Set Admin Profile Edit page 
-function setValue(value) {
-    $("#e_first_name").val(value.first_name);
-    $("#e_last_name").val(value.last_name);
-    $("#e_user_name").val(value.user_name);
-    $("#e_password").val(value.show_password);
-    $("#hidden_id").val(value.id);
-}
+    $(document).ready(function() {
+        //Datable  add csv file 
+        var empDataTable = $('#example').DataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                            10] // Column index which needs to export
+                    }
+                },
+                {
+                    extend: 'csv',
+                },
+                {
+                    extend: 'excel',
+                }
+            ]
+        });
 
-// Show Password Input in Admin Profile
-$(document).ready(function() {
-
-    //Datable 
-    var empDataTable = $('#example').DataTable({
-     dom: 'Blfrtip',
-     buttons: [
-       
-       {
-          extend: 'pdf',
-          exportOptions: {
-            columns: [0,1,2,3,4,5,6,7,8,9,10] // Column index which needs to export
-          }
-       },
-       {
-          extend: 'csv',
-       },
-       {
-          extend: 'excel',
-       } 
-     ] 
+    // Show Password Input in Admin Profile
+        $('#show_password').on('click', function() {
+            var passInput = $("#e_password");
+            console.log('passInput', passInput);
+            if (passInput.attr('type') === 'password') {
+                passInput.attr('type', 'text');
+            } else {
+                passInput.attr('type', 'password');
+            }
+        });
     });
-
-    $('#show_password').on('click', function() {
-        var passInput = $("#e_password");
-        console.log('passInput', passInput);
-        if (passInput.attr('type') === 'password') {
-            passInput.attr('type', 'text');
-        } else {
-            passInput.attr('type', 'password');
-        }
-    });
-
- 
-});
 </script>
 </body>
 
